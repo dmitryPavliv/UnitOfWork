@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FF565E1A-C8B0-4AE2-A092-79E104E80430}"
 EndProject
@@ -50,6 +50,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Concrete", "Concrete", "{0EBE4962-A166-47FB-86DD-9711DAB133F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoDataMapperAbstract", "AdoDataMapperAbstract\AdoDataMapperAbstract.csproj", "{1DB6AFD4-5011-49E6-B5C5-53E04FC63EBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E0C8310D-1341-427E-94A3-788816EAA78B}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,5 +142,8 @@ Global
 		{FE0A0658-85B5-44F3-93B9-CC9352CCFAA2} = {790D1604-4E67-4A4A-9DBC-163C7CC58F06}
 		{0EBE4962-A166-47FB-86DD-9711DAB133F6} = {790D1604-4E67-4A4A-9DBC-163C7CC58F06}
 		{1DB6AFD4-5011-49E6-B5C5-53E04FC63EBD} = {FE0A0658-85B5-44F3-93B9-CC9352CCFAA2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2A1DCF0-0CD2-401E-A9E6-49141784FEEF}
 	EndGlobalSection
 EndGlobal

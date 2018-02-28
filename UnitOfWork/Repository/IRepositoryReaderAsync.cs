@@ -1,32 +1,38 @@
-﻿using System;
+﻿// pluskal
+
+using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Threading.Tasks;
 using BaseDataModel;
+using Repository.Contracts;
 
 namespace Repository
 {
-    using System.Diagnostics.Contracts;
-
-    using Repository.Contracts;
-
     /// <summary>
-    /// Generic asynchronous repository reader interface
+    ///     Generic asynchronous repository reader interface
     /// </summary>
     /// <typeparam name="T">Type must be a class and inherited from IDataModel interface</typeparam>
     [ContractClass(typeof(RepositoryReaderAsyncContract<>))]
     public interface IRepositoryReaderAsync<T> where T : class, IDataModel, new()
     {
         /// <summary>
-        /// Gets item by id asyncronously
+        ///     Gets all items in persistence storage asyncronously
         /// </summary>
-        /// <param name="id">Id of item to get</param>
-        /// <returns>A task that represents the asynchronous operation. The task result contains default ( T ) if source is empty; otherwise, the found element in persistence storage</returns>
-        Task<T> GetByIdAsync(Guid id);
+        /// <returns>
+        ///     A task that represents the asynchronous operation. The task result contains all items of type T in persistence
+        ///     storage
+        /// </returns>
+        Task<IEnumerable<T>> GetAllAsync();
 
         /// <summary>
-        /// Gets all items in persistence storage asyncronously
+        ///     Gets item by id asyncronously
         /// </summary>
-        /// <returns>A task that represents the asynchronous operation. The task result contains all items of type T in persistence storage</returns>
-        Task<IEnumerable<T>> GetAllAsync();
+        /// <param name="id">Id of item to get</param>
+        /// <returns>
+        ///     A task that represents the asynchronous operation. The task result contains default ( T ) if source is empty;
+        ///     otherwise, the found element in persistence storage
+        /// </returns>
+        Task<T> GetByIdAsync(Guid id);
     }
 }

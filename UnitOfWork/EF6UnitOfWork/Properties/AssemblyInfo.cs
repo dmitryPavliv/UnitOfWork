@@ -1,4 +1,6 @@
-﻿using System.Reflection;
+﻿// pluskal
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -36,4 +38,3 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: InternalsVisibleTo("EF6UnitOfWork.Tests1")]
 [assembly: InternalsVisibleTo("EF6UnitOfWork.Explorables")]
-

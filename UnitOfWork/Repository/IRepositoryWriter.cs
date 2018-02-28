@@ -1,52 +1,52 @@
-﻿using BaseDataModel;
+﻿// pluskal
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Contracts;
+using BaseDataModel;
+using Repository.Contracts;
 
 namespace Repository
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics.Contracts;
-
-    using Contracts;
-
     /// <summary>
-    /// Generic writer repository interface
+    ///     Generic writer repository interface
     /// </summary>
     /// <typeparam name="T">Type must be a class and inherited from IDataModel interface</typeparam>
     [ContractClass(typeof(RepositoryWriterContract<>))]
     public interface IRepositoryWriter<T> where T : class, IDataModel, new()
     {
         /// <summary>
-        /// Inserts new item
-        /// </summary>
-        /// <param name="item">Item to add</param>
-        /// <returns>Newly created item</returns>
-        T Insert(T item);
-
-        /// <summary>
-        /// Inserts range of items
-        /// </summary>
-        /// <param name="items">Items to add</param>
-        /// <returns>Newly created items</returns>
-        IEnumerable<T> InsertRange(IEnumerable<T> items);
-
-        /// <summary>
-        /// Updates existing item
-        /// </summary>
-        /// <param name="item">Item to update</param>
-        void Update(T item);
-
-        /// <summary>
-        /// Deletes item
+        ///     Deletes item
         /// </summary>
         /// <param name="id">Id of item to delete</param>
         /// <returns></returns>
         T Delete(Guid id);
 
         /// <summary>
-        /// Deletes item
+        ///     Deletes item
         /// </summary>
         /// <param name="item">Item to delete</param>
         /// <returns></returns>
         T Delete(T item);
+
+        /// <summary>
+        ///     Inserts new item
+        /// </summary>
+        /// <param name="item">Item to add</param>
+        /// <returns>Newly created item</returns>
+        T Insert(T item);
+
+        /// <summary>
+        ///     Inserts range of items
+        /// </summary>
+        /// <param name="items">Items to add</param>
+        /// <returns>Newly created items</returns>
+        IEnumerable<T> InsertRange(IEnumerable<T> items);
+
+        /// <summary>
+        ///     Updates existing item
+        /// </summary>
+        /// <param name="item">Item to update</param>
+        void Update(T item);
     }
 }
