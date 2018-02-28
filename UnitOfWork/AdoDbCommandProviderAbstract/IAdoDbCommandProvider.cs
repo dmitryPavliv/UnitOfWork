@@ -1,20 +1,20 @@
-﻿namespace AdoDbCommandProviderAbstract
+﻿// pluskal
+
+using System;
+using System.Data;
+using BaseDataModel;
+
+namespace AdoDbCommandProviderAbstract
 {
-    using System;
-    using System.Data;
-
-    using BaseDataModel;
-
-    public interface IAdoDbCommandProvider<T> where T: class, IDataModel, new()
+    public interface IAdoDbCommandProvider<T> where T : class, IDataModel, new()
     {
+        IDbCommand DeleteCommand(IDbConnection connection, IDbTransaction transaction, T item);
         IDbCommand InsertCommand(IDbConnection connection, IDbTransaction transaction, T item);
 
-        IDbCommand DeleteCommand(IDbConnection connection, IDbTransaction transaction, T item);
-
-        IDbCommand UpdateCommand(IDbConnection connection, IDbTransaction transaction, T item);
+        IDbCommand SelectAllCommand(IDbConnection connection, IDbTransaction transaction);
 
         IDbCommand SelectByIdCommand(IDbConnection connection, IDbTransaction transaction, Guid id);
 
-        IDbCommand SelectAllCommand(IDbConnection connection, IDbTransaction transaction);
+        IDbCommand UpdateCommand(IDbConnection connection, IDbTransaction transaction, T item);
     }
 }
