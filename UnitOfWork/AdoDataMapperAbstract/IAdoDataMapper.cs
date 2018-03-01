@@ -1,10 +1,11 @@
-﻿namespace AdoDataMapperAbstract
+﻿// pluskal
+
+using System.Data;
+using BaseDataModel;
+
+namespace AdoDataMapperAbstract
 {
-    using System.Data;
-
-    using BaseDataModel;
-
-    public interface IAdoDataMapper<T> where T: class, IDataModel, new()
+    public interface IAdoDataMapper<T> where T : class, IDataModel, new()
     {
         T Map(IDataReader reader);
     }

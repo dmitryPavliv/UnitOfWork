@@ -1,9 +1,12 @@
-﻿namespace AdoTableNameProviderAbstract
-{
-    using BaseDataModel;
+﻿// pluskal
 
+using System;
+using BaseDataModel;
+
+namespace AdoTableNameProviderAbstract
+{
     public interface IAdoTableNameProvider
     {
-        string GetTableName<T>() where T : class, IDataModel, new();
+        String GetTableName<T>() where T : class, IDataModel, new();
     }
 }
