@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FF565E1A-C8B0-4AE2-A092-79E104E80430}"
 EndProject
@@ -11,37 +11,37 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abstract", "Abstract", "{2D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{4E64521E-0CFD-4A56-AA6B-EE0463C87F51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{39E436D1-3839-4CF7-BFAF-C0D2F2788024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{39E436D1-3839-4CF7-BFAF-C0D2F2788024}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseDataModel", "BaseDataModel\BaseDataModel.csproj", "{EE6A9F9F-4A47-4E0B-8926-66935E7DB6F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseDataModel", "BaseDataModel\BaseDataModel.csproj", "{EE6A9F9F-4A47-4E0B-8926-66935E7DB6F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWork", "UnitOfWork\UnitOfWork.csproj", "{56987BCA-26EC-4DC9-93A5-B865734DCDEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitOfWork", "UnitOfWork\UnitOfWork.csproj", "{56987BCA-26EC-4DC9-93A5-B865734DCDEF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity Framework 6", "Entity Framework 6", "{0DAC5888-9ECC-41B5-8BE7-9395D64D22C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6UnitOfWork", "EF6UnitOfWork\EF6UnitOfWork.csproj", "{29EC2690-EE3B-496F-8489-0E6B81CD53C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF6UnitOfWork", "EF6UnitOfWork\EF6UnitOfWork.csproj", "{29EC2690-EE3B-496F-8489-0E6B81CD53C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6UnitOfWork.Tests", "EF6UnitOfWork.Tests\EF6UnitOfWork.Tests.csproj", "{55E4E5ED-9191-4D85-9131-699EDD2D1202}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF6UnitOfWork.Tests", "EF6UnitOfWork.Tests\EF6UnitOfWork.Tests.csproj", "{55E4E5ED-9191-4D85-9131-699EDD2D1202}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6Repository", "EF6Repository\EF6Repository.csproj", "{7D81A222-01B8-401F-8C95-198DD14E0824}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF6Repository", "EF6Repository\EF6Repository.csproj", "{7D81A222-01B8-401F-8C95-198DD14E0824}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6Repository.Tests", "EF6Repository.Tests\EF6Repository.Tests.csproj", "{8EA4E822-A02D-446B-8E17-EC4C71191CBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF6Repository.Tests", "EF6Repository.Tests\EF6Repository.Tests.csproj", "{8EA4E822-A02D-446B-8E17-EC4C71191CBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fakes", "Fakes\Fakes.csproj", "{88807A91-2D5B-4CAA-870C-FE3776F3D414}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fakes", "Fakes\Fakes.csproj", "{88807A91-2D5B-4CAA-870C-FE3776F3D414}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity Framework 6", "Entity Framework 6", "{E73AB41C-8F19-4986-8EC8-023375083193}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ado.Net", "Ado.Net", "{0F8A60D4-3706-4490-BF00-8C004C820EAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoRepository", "AdoRepository\AdoRepository.csproj", "{459E1F19-5713-4B46-BBC8-AB50CAA19128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoRepository", "AdoRepository\AdoRepository.csproj", "{459E1F19-5713-4B46-BBC8-AB50CAA19128}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ado.Net", "Ado.Net", "{E8B12945-8CB2-4427-9873-D3327BB473BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoRepository.Tests", "AdoRepository.Tests\AdoRepository.Tests.csproj", "{76D12781-9ED3-44C2-9BC4-C82847E4AC58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoRepository.Tests", "AdoRepository.Tests\AdoRepository.Tests.csproj", "{76D12781-9ED3-44C2-9BC4-C82847E4AC58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoTableNameProviderAbstract", "AdoTableNameProviderAbstract\AdoTableNameProviderAbstract.csproj", "{B362CE54-A083-42FB-A9A4-8A3DA77A1AA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoTableNameProviderAbstract", "AdoTableNameProviderAbstract\AdoTableNameProviderAbstract.csproj", "{B362CE54-A083-42FB-A9A4-8A3DA77A1AA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoDbCommandProviderAbstract", "AdoDbCommandProviderAbstract\AdoDbCommandProviderAbstract.csproj", "{292D50C4-87D9-4998-A05D-9348C479FCDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoDbCommandProviderAbstract", "AdoDbCommandProviderAbstract\AdoDbCommandProviderAbstract.csproj", "{292D50C4-87D9-4998-A05D-9348C479FCDB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{790D1604-4E67-4A4A-9DBC-163C7CC58F06}"
 EndProject
@@ -49,7 +49,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abstract", "Abstract", "{FE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Concrete", "Concrete", "{0EBE4962-A166-47FB-86DD-9711DAB133F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoDataMapperAbstract", "AdoDataMapperAbstract\AdoDataMapperAbstract.csproj", "{1DB6AFD4-5011-49E6-B5C5-53E04FC63EBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoDataMapperAbstract", "AdoDataMapperAbstract\AdoDataMapperAbstract.csproj", "{1DB6AFD4-5011-49E6-B5C5-53E04FC63EBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E0C8310D-1341-427E-94A3-788816EAA78B}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\docker-compose.yml = ..\docker-compose.yml
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cassandra", "Cassandra", "{4007054E-8903-4E50-AC48-21922EAAE83F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CassandraRepository", "CassandraRepository\CassandraRepository.csproj", "{F0E5A1DB-9A76-48F5-856E-ADBC01304C13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CassandraUnitOfWork", "CassandraUnitOfWork\CassandraUnitOfWork.csproj", "{F6FCB2C9-34A8-4C4F-8C7C-D78A425B1DFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cassandra", "Cassandra", "{17473E36-AAC7-4A7D-A11F-423543D33BA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CassandraRepository.Tests", "CassandraRepository.Tests\CassandraRepository.Tests.csproj", "{134BD782-ED63-467C-8474-807CE47599FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CassandraUnitOfWork.Tests", "CassandraUnitOfWork.Tests\CassandraUnitOfWork.Tests.csproj", "{1D8452DF-5AA0-45A4-AFE4-8C39B6771325}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +129,22 @@ Global
 		{1DB6AFD4-5011-49E6-B5C5-53E04FC63EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DB6AFD4-5011-49E6-B5C5-53E04FC63EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DB6AFD4-5011-49E6-B5C5-53E04FC63EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0E5A1DB-9A76-48F5-856E-ADBC01304C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0E5A1DB-9A76-48F5-856E-ADBC01304C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0E5A1DB-9A76-48F5-856E-ADBC01304C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0E5A1DB-9A76-48F5-856E-ADBC01304C13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6FCB2C9-34A8-4C4F-8C7C-D78A425B1DFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6FCB2C9-34A8-4C4F-8C7C-D78A425B1DFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6FCB2C9-34A8-4C4F-8C7C-D78A425B1DFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6FCB2C9-34A8-4C4F-8C7C-D78A425B1DFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134BD782-ED63-467C-8474-807CE47599FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134BD782-ED63-467C-8474-807CE47599FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134BD782-ED63-467C-8474-807CE47599FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134BD782-ED63-467C-8474-807CE47599FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8452DF-5AA0-45A4-AFE4-8C39B6771325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8452DF-5AA0-45A4-AFE4-8C39B6771325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8452DF-5AA0-45A4-AFE4-8C39B6771325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8452DF-5AA0-45A4-AFE4-8C39B6771325}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -135,5 +171,14 @@ Global
 		{FE0A0658-85B5-44F3-93B9-CC9352CCFAA2} = {790D1604-4E67-4A4A-9DBC-163C7CC58F06}
 		{0EBE4962-A166-47FB-86DD-9711DAB133F6} = {790D1604-4E67-4A4A-9DBC-163C7CC58F06}
 		{1DB6AFD4-5011-49E6-B5C5-53E04FC63EBD} = {FE0A0658-85B5-44F3-93B9-CC9352CCFAA2}
+		{4007054E-8903-4E50-AC48-21922EAAE83F} = {4E64521E-0CFD-4A56-AA6B-EE0463C87F51}
+		{F0E5A1DB-9A76-48F5-856E-ADBC01304C13} = {4007054E-8903-4E50-AC48-21922EAAE83F}
+		{F6FCB2C9-34A8-4C4F-8C7C-D78A425B1DFB} = {4007054E-8903-4E50-AC48-21922EAAE83F}
+		{17473E36-AAC7-4A7D-A11F-423543D33BA9} = {FF565E1A-C8B0-4AE2-A092-79E104E80430}
+		{134BD782-ED63-467C-8474-807CE47599FC} = {17473E36-AAC7-4A7D-A11F-423543D33BA9}
+		{1D8452DF-5AA0-45A4-AFE4-8C39B6771325} = {17473E36-AAC7-4A7D-A11F-423543D33BA9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2A1DCF0-0CD2-401E-A9E6-49141784FEEF}
 	EndGlobalSection
 EndGlobal

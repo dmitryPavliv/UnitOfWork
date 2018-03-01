@@ -1,45 +1,37 @@
-﻿// pluskal
-
 using System;
-using System.Data;
-using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using Effort;
-using EF6Repository;
+using Cassandra;
+using CassandraRepository;
 using Fakes;
 using Repository;
 using UnitOfWork;
 using Xunit;
 
-namespace EF6UnitOfWork.Tests
+namespace CassandraUnitOfWork.Tests
 {
-    public class EF6UnitOfWorkTests
+    public class CassandraUnitOfWorkTests : IClassFixture<CassandraUnitOfWorkTestsFixtureData>
     {
-        private readonly DbContext _context;
         private readonly IRepositoryReader<Foo> _repositoryReader;
         private readonly IRepositoryWriter<Foo> _repositoryWriter;
         private readonly IUnitOfWork _unitOfWork;
 
-        public EF6UnitOfWorkTests()
+        public CassandraUnitOfWorkTests(CassandraUnitOfWorkTestsFixtureData fixtureData)
         {
-            var connection = DbConnectionFactory.CreateTransient();
-            this._context = new FooContext(connection);
-
-            this._unitOfWork = new Ef6UnitOfWork(this._context, IsolationLevel.Unspecified);
+            this._unitOfWork = fixtureData.UnitOfWork;
 
             var repository = new BaseRepository<Foo>(this._unitOfWork);
             this._repositoryWriter = repository;
             this._repositoryReader = repository;
         }
 
-        [Fact]
+        [Fact(Skip = "NotImplemented")]
         public void CommitsTransactionCorrectly()
         {
             //Arrange
             var initialCount = this._repositoryReader.GetAll().Count();
-            var foo1 = new Foo {Id = Guid.NewGuid()};
-            var foo2 = new Foo {Id = Guid.NewGuid()};
+            var foo1 = new Foo { Id = Guid.NewGuid() };
+            var foo2 = new Foo { Id = Guid.NewGuid() };
 
             //Act
             this._unitOfWork.BeginTransaction();
@@ -60,26 +52,25 @@ namespace EF6UnitOfWork.Tests
         public void DisposeWorksCorrectly()
         {
             //Arrange
-            var connection = DbConnectionFactory.CreateTransient();
-            var context = new FooContext(connection);
-            var unitOfWork = new Ef6UnitOfWork(this._context, IsolationLevel.Unspecified);
-            var repository = new BaseRepository<Foo>(unitOfWork);
+            var cluster = Cluster.Builder().AddContactPoint("127.0.0.1").Build();
+            var unitOfWork = new CassandraUnitOfWork(cluster, new CassandraEntityMappings());
+            var repository = new BaseRepository<Foo>(this._unitOfWork);
 
             //Act
-            repository.Insert(new Foo {Id = Guid.NewGuid()});
+            repository.Insert(new Foo { Id = Guid.NewGuid() });
             unitOfWork.SaveChanges();
             unitOfWork.Dispose();
 
             //Assert
         }
 
-        [Fact]
+        [Fact(Skip = "NotImplemented")]
         public void RollsBackTransactionCorrectly()
         {
             //Arrange
             var initialCount = this._repositoryReader.GetAll().Count();
-            var foo1 = new Foo {Id = Guid.NewGuid()};
-            var foo2 = new Foo {Id = Guid.NewGuid()};
+            var foo1 = new Foo { Id = Guid.NewGuid() };
+            var foo2 = new Foo { Id = Guid.NewGuid() };
 
             //Act
             this._unitOfWork.BeginTransaction();
@@ -90,7 +81,7 @@ namespace EF6UnitOfWork.Tests
             this._unitOfWork.Rollback();
 
             //Assert
-            var all = this._repositoryReader.GetAll();
+            var all = this._repositoryReader.GetAll().ToArray();
             Assert.Equal(initialCount, all.Count());
             Assert.DoesNotContain(foo1, all);
             Assert.DoesNotContain(foo2, all);
@@ -101,8 +92,8 @@ namespace EF6UnitOfWork.Tests
         {
             //Arrange
             var initialCount = this._repositoryReader.GetAll().Count();
-            var foo1 = new Foo {Id = Guid.NewGuid()};
-            var foo2 = new Foo {Id = Guid.NewGuid()};
+            var foo1 = new Foo { Id = Guid.NewGuid() };
+            var foo2 = new Foo { Id = Guid.NewGuid() };
 
             //Act
             this._repositoryWriter.Insert(foo1);
@@ -110,7 +101,7 @@ namespace EF6UnitOfWork.Tests
             this._unitOfWork.SaveChanges();
 
             //Assert
-            var all = this._repositoryReader.GetAll();
+            var all = this._repositoryReader.GetAll().ToArray();
             Assert.Equal(initialCount + 2, all.Count());
             Assert.Contains(foo1, all);
             Assert.Contains(foo2, all);
@@ -121,8 +112,8 @@ namespace EF6UnitOfWork.Tests
         {
             //Arrange
             var initialCount = this._repositoryReader.GetAll().Count();
-            var foo1 = new Foo {Id = Guid.NewGuid()};
-            var foo2 = new Foo {Id = Guid.NewGuid()};
+            var foo1 = new Foo { Id = Guid.NewGuid() };
+            var foo2 = new Foo { Id = Guid.NewGuid() };
 
             //Act
             this._repositoryWriter.Insert(foo1);
@@ -130,7 +121,7 @@ namespace EF6UnitOfWork.Tests
             await this._unitOfWork.SaveChangesAsync();
 
             //Assert
-            var all = this._repositoryReader.GetAll();
+            var all = this._repositoryReader.GetAll().ToArray();
             Assert.Equal(initialCount + 2, all.Count());
             Assert.Contains(foo1, all);
             Assert.Contains(foo2, all);

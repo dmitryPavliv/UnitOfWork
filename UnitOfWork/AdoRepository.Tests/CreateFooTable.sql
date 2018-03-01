@@ -1,4 +1,7 @@
-USE [dbo]
+CREATE DATABASE [AdoUoWTestDb]
+GO
+
+USE [AdoUoWTestDb]
 GO
 
 /****** Object:  Table [dbo].[Foos]    Script Date: 8/16/2015 7:01:16 PM ******/
@@ -8,7 +11,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[Foos](
+CREATE TABLE [Foos](
 	[Id] [uniqueidentifier] NOT NULL,
 	[Name] [nvarchar](max) NULL,
 PRIMARY KEY CLUSTERED 

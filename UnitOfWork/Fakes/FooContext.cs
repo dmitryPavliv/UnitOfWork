@@ -1,8 +1,10 @@
-﻿namespace Fakes
-{
-    using System.Data.Common;
-    using System.Data.Entity;
+﻿// pluskal
 
+using System.Data.Common;
+using System.Data.Entity;
+
+namespace Fakes
+{
     public class FooContext : DbContext
     {
         public FooContext(DbConnection connection)
@@ -10,6 +12,6 @@
         {
         }
 
-        public IDbSet<Foo> Foos { get; set; } 
+        public IDbSet<Foo> Foos { get; set; }
     }
 }
